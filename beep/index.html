@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta
+   name="viewport" 
+   content="width=device-width, initial-scale=1.0"
+  />
+  <title>beep</title>
+ </head>
+ <body>
+  <script>
+   document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+     const ctx = new AudioContext
+     const osc = ctx.createOscillator() 
+
+     osc.connect(ctx.destination)
+     osc.type = "sine"
+     osc.frequency.setValueAtTime(
+      3000,
+      ctx.currentTime,
+     )
+     osc.start()
+     osc.stop(ctx.currentTime + 0.22)
+
+    }
+   )
+  </script>
+ </body>
+</html>

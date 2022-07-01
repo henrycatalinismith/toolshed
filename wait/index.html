@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta
+   name="viewport" 
+   content="width=device-width, initial-scale=1.0"
+  />
+  <title>wait</title>
+ </head>
+ <body>
+  <script>
+   document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+     const script = document.createElement("script")
+     script.src = "/toolshed/wait.js"
+     script.type = "module"
+     document.head.appendChild(script)
+    }
+   )
+  </script>
+ </body>
+</html>
