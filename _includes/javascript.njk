@@ -13,7 +13,10 @@
    document.addEventListener(
     "DOMContentLoaded",
     function() {
-     {{ content | safe }}
+     const script = document.createElement("script")
+     script.src = "{{ ["/", title, ".js" ] | join | url }}"
+     script.type = "module"
+     document.head.appendChild(script)
     }
    )
   </script>

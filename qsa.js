@@ -1,0 +1,1 @@
+export const qsa = qs => document.querySelectorAll(qs)
